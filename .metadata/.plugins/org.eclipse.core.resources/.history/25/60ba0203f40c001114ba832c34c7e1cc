@@ -1,0 +1,47 @@
+package com.tka.feb18;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class staffController {
+	
+	@Autowired
+	StaffService ss;
+	
+	// 2nd task
+	@GetMapping("getStaff/{id}")
+	public Staff m1(@PathVariable int id) {
+		return ss.getStaff(id);
+	} 
+	
+	@PostMapping("add-staff")
+	public String addStaff(@RequestBody Staff s) {
+		return ss.addStaff(s);
+	}
+	
+	@PutMapping("update-staff")
+	public String updateStaff(@RequestBody Staff s) {
+		return ss.updateStaff(s);
+	}
+	
+	@DeleteMapping("delete-staff/{id}")
+	public String deleteStaff(@PathVariable int id) {
+		return ss.deleteStaff(id);
+	}
+	
+	// 1st task
+	@GetMapping("/getAllStaff")
+		public List<Staff> getAllStaff(){
+			return ss.getAllStaff();
+		}
+	
+}

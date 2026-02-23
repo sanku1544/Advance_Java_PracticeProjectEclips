@@ -1,0 +1,42 @@
+package com.tka.feb17;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	SreviceStudent ss;
+	
+	
+	@GetMapping("/student/{id}")
+	public Student getStudetnByid(@PathVariable int id) {
+		return ss.getStudetnByid(id);
+	}
+		
+	@PostMapping("/add-student")
+	public String insertStudent(@RequestBody Student s) {
+		System.out.println("Student:- "+s);
+		ss.addStudent(s);
+		return s.getName()+" "+ "Insertes sucessfully";
+		
+	}
+	
+	@PutMapping("/update-student")
+	public String updateStudent(@RequestBody Student s) {
+		System.out.println("Student:- "+s);
+		ss.updateStudent(s);
+		return s.getName()+" "+ "update sucessfully";
+		
+	}
+	
+	
+	
+
+}

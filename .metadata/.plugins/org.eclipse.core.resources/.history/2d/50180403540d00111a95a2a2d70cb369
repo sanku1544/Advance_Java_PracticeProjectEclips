@@ -1,0 +1,18 @@
+package com.tka.sp_emp_management;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class EmployeeDao {
+	
+	@Autowired
+	SessionFactory sf;
+	
+	public Employee getEmpById(int id) {
+		Session ss = sf.openSession();
+		ss.get(Employee.class, id);
+		return null;
+	}
+
+}

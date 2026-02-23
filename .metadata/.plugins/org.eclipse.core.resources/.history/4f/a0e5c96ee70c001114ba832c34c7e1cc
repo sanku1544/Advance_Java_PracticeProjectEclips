@@ -1,0 +1,20 @@
+package com.tka.feb18;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class StaffDao {
+	
+	@Autowired
+	SessionFactory sf;
+
+	public void addStaff(Staff s) {
+		Session ss = sf.openSession();
+		ss.save(s);
+		ss.beginTransaction().commit();
+		System.out.println("staff inserted sucess--");
+	}
+	
+	
+}

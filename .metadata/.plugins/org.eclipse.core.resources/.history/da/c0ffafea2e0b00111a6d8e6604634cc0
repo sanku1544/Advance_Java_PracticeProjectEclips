@@ -1,0 +1,36 @@
+package com.tka.feb16;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class A {
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome-------------");
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session ss = sf.openSession();
+		System.out.println("Configuration okay-----");
+		
+		Product p1= new Product(1,"Pizza",120);
+		Product p2= new Product(2,"Burger",90);
+		Product p3= new Product(3,"Fries",100);
+		Product p4= new Product(4,"Fanta",130);
+		Product p5= new Product(5,"Crispy",150);
+		
+		List<Product> c1ProList = new ArrayList<>();
+		c1ProList.add(p2);
+		c1ProList.add(p5);
+		
+		Customer c1= new Customer();
+		c1.setName("Rahul");
+		c1.setProduct(c1ProList);
+		
+		System.out.println("Details--- ");
+		System.out.println(c1);
+		
+	}
+}

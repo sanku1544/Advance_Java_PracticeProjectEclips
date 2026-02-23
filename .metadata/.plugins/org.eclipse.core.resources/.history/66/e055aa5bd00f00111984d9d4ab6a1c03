@@ -1,0 +1,32 @@
+package com.tka.UserAuthentication;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserDao userDao;
+	
+	public String registerUser(User user) {
+		return userDao.registerUser(user);
+	}
+
+	public String loginUser(String email, String password) {
+		return userDao.loginUser(email,password);
+	}
+
+	public User getUserProfile(String email, String password) {
+	    User user = userDao.findByEmailAndPassword(email, password);
+
+	    if (user == null) {
+	        throw new RuntimeException("Invalid login credentials");
+	    }
+
+	    return user;  // Return the full profile
+	}
+
+}

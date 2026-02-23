@@ -1,0 +1,36 @@
+package com.tka.sp_emp_management;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class EmployeeService {
+
+	@Autowired
+	EmployeeDao empDao;
+	public Employee getEmpById(int id) {
+		return empDao.getEmpById(id);
+	}
+	public String addEmployee(Employee emp) {
+		return empDao.addEmployee(emp);
+	}
+	public String updateEmployee(Employee emp) {
+		return empDao.updateEmployee(emp);
+	}
+	public String deleteEmployee(int id) {
+		return empDao.deleteEmployee(id);
+	}
+	public List<Employee> getAllEmployee() {
+		return empDao.getAllEmployee();
+	}
+	public List<Employee> getEmpByRole(String role) {
+		return empDao.getEmpByRole(role);
+	}
+	public List<Employee> getEmpBySalary(int sal) {
+		return empDao.getEmpBySalary(sal);
+	}
+
+}

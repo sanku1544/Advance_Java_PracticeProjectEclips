@@ -1,0 +1,33 @@
+package com.tka.sp_emp_management;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class EmployeeDao {
+	
+	@Autowired
+	SessionFactory sf;
+	
+	public Employee getEmpById(int id) {
+		Session ss = sf.openSession();
+		return ss.get(Employee.class, id);
+	}
+
+	public String addEmployee(Employee emp) {
+		Session ss = sf.openSession();
+		ss.persist(emp);
+		ss.beginTransaction().commit();
+		return emp.getName()+" :- "+"was successfully inserted...";
+	}
+
+	public String updateEmployee(Employee emp) {
+		Session ss = sf.openSession();
+		ss.merge(emp);
+		ss.beginTransaction().commit();
+		return emp.getName()+" :- "+"was successfully updated..."; 
+	}
+
+}

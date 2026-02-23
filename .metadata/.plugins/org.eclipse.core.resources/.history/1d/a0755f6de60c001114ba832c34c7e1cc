@@ -1,0 +1,11 @@
+package com.tka.feb18;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class staffController {
+		
+	@GetMapping("/")
+	public String m1() {
+		return "Welcome to Kiran Academy";
+	}
+}

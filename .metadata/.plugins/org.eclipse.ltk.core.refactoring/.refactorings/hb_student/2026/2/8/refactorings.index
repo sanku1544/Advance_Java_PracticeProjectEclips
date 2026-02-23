@@ -1,0 +1,17 @@
+1771176035556	Rename type 'EmployeeSelectAllSQL'
+1771176085520	Extract local variable 'query'
+1771176127372	Extract local variable 'list'
+1771176213903	Copy compilation unit
+1771176257257	Extract local variable 'list'
+1771176343158	Copy compilation unit
+1771176364937	Extract local variable 'criteria'
+1771176513241	Extract local variable 'list'
+1771176615560	Copy compilation unit
+1771176638745	Extract local variable 'criteria'
+1771176864685	Extract local variable 'list'
+1771177233533	Rename type 'EmployeeCriteriaColumnsProjectionOPt'
+1771177276645	Rename type 'EmployeeCriteriaColumnsProjection'
+1771177314420	Extract local variable 'ct'
+1771177532222	Extract local variable 'list'
+1771177625303	Extract local variable 'list'
+1771242261401	Copy file

@@ -1,0 +1,14 @@
+package com.tka.sp_emp_management;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class EmployeeService {
+
+	
+	@Autowired
+	EmployeeDao empDao;
+	public Employee getEmpById(int id) {
+		return empDao.getEmpById(id);
+	}
+
+}

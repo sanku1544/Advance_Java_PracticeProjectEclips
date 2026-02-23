@@ -1,0 +1,27 @@
+1770811866084	Extract local variable 'sf'
+1770811878903	Extract local variable 'ss'
+1770811896417	Extract local variable 'tr'
+1770811993813	Extract local variable 'emp'
+1770812356361	Rename local variable 'con'
+1770895547451	Copy compilation unit
+1770895602970	Copy compilation unit
+1770895679807	Copy compilation unit
+1770895745355	Extract local variable 'employee'
+1770896191595	Copy compilation unit
+1770896321153	Copy compilation unit
+1770896562260	Extract local variable 'employee'
+1770897011404	Extract local variable 'empData'
+1770982507639	Copy compilation unit
+1770982551267	Extract local variable 'sqlQuery'
+1770982657053	Extract local variable 'list'
+1770982909969	Copy compilation unit
+1770983035855	Extract local variable 'list'
+1770983185519	Copy compilation unit
+1770983283050	Extract local variable 'criteria'
+1770983315143	Extract local variable 'list'
+1770983474521	Copy compilation unit
+1770983527930	Extract local variable 'criteria'
+1770983804135	Copy compilation unit
+1770984009507	Extract local variable 'list'
+1770984253753	Rename type 'EmployeeCriteriaColumnsRestrictions'
+1770984273411	Copy compilation unit

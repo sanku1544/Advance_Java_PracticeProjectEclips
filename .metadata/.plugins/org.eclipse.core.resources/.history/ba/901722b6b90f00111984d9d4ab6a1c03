@@ -1,0 +1,10 @@
+package com.tka.UserAuthentication;
+
+public class UserService {
+
+	public String registerUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

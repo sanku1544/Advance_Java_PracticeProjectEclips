@@ -1,0 +1,20 @@
+package com.tka.UserAuthentication;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserDao userDao;
+	
+	public String registerUser(User user) {
+		return userDao.registerUser(user);
+	}
+
+	public String loginUser(String email, String password) {
+		return userDao.loginUser(email,password);
+	}
+
+}

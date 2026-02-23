@@ -1,0 +1,48 @@
+package com.tka.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.tka.entity.Customer;
+import com.tka.entity.OrderItems;
+import com.tka.entity.Product;
+
+public class Order {
+		
+	OrderItems r1= null;
+	
+	public List<Product> allProducts(){
+		List<Product> lp= new ArrayList<>();
+		
+		lp.add(new Product(2, "KitKat", "Food", 20));
+        lp.add(new Product(3, "iPhone", "Electronics", 80000));
+        lp.add(new Product(4, "Laptop", "Electronics", 55000));
+        lp.add(new Product(5, "Pen", "Stationery", 10));
+        lp.add(new Product(6, "Notebook", "Stationery", 50));
+        lp.add(new Product(7, "Shoes", "Fashion", 2000));
+        lp.add(new Product(8, "T-Shirt", "Fashion", 700));
+        lp.add(new Product(9, "Watch", "Accelpories", 3000));
+        lp.add(new Product(10, "Bag", "Accelpories", 1500));
+        lp.add(new Product(11, "Headphones", "Electronics", 2500));
+        lp.add(new Product(12, "Keyboard", "Electronics", 1200));
+        lp.add(new Product(13, "Mouse", "Electronics", 800));
+        lp.add(new Product(14, "Chair", "Furniture", 4000));
+        lp.add(new Product(15, "Table", "Furniture", 7000));
+        lp.add(new Product(16, "Bottle", "Daily Use", 100));
+        lp.add(new Product(17, "Soap", "Daily Use", 40));
+        lp.add(new Product(18, "Shampoo", "Daily Use", 180));
+        lp.add(new Product(19, "TV", "Electronics", 45000));
+        lp.add(new Product(20, "Refrigerator", "Electronics", 35000));
+        
+        return lp;
+		
+	}
+	List<Product> orderItems(){
+		Order r1= new Order();
+		List<Product> allProducts = r1.allProducts();
+		allProducts.forEach(System.out::println);
+		Customer c1= new Customer(1,"Snaket",85461165656L);
+		r1= new OrderItems(1,c1,);
+		
+	}
+}

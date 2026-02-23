@@ -1,0 +1,46 @@
+package com.tka.feb17;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.websocket.server.PathParam;
+
+@RestController
+public class StudentController {
+		
+	List<Student> slist=new ArrayList<>();
+	@GetMapping("/")
+	String Student() {
+		return "Welcome";
+	}
+	
+	@GetMapping("/student")
+	List<Student> getStudent(){
+		slist.add(new Student(2,"Nikam",25));
+		slist.add(new Student(3,"Jagdish",21));
+		slist.add(new Student(4,"Akash",23));
+		return slist;
+	}
+	
+//	localhost:8080/login?username=admin&passwors=admin@123
+	@PutMapping("/login")
+	void putFromBrowser(@PathParam("") String use,@PathParam("") String pass) {
+		System.out.println(use);
+		System.out.println(pass);
+	}
+	
+	@PutMapping("/stud")
+	void putStudent(@PathParam("") int id,@PathParam("") String name,@PathParam("") int age) {
+		List<Student> s1=new ArrayList<>();
+		s1.add(new Student(id,name,age));
+		s1.forEach(System.out::println);
+
+	}
+	
+
+}

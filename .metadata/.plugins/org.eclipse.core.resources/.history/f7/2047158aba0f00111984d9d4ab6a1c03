@@ -1,0 +1,21 @@
+package com.tka.UserAuthentication;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserDao {
+	
+	@Autowired
+	SessionFactory sf;
+
+	public String registerUser(User user) {
+		Session ss = sf.openSession();
+		ss.save(ss);
+		ss.beginTransaction().commit();
+		return "User Register Successfully";
+	}
+
+}
