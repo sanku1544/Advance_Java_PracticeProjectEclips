@@ -1,0 +1,14 @@
+package com.tka.feb18;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class KiranAcademyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(KiranAcademyApplication.class, args);
+		System.err.println("App successfully started................");
+	}
+
+}

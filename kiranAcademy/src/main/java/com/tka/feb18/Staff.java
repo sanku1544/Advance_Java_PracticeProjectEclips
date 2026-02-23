@@ -1,0 +1,83 @@
+package com.tka.feb18;
+
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Component
+@Entity
+@Table(name="staff")
+public class Staff {
+	
+	@Id
+	private int staffId;
+	private String name;
+	private String profile;
+	private int salary;
+	private int experience;
+	
+	public Staff() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Staff(int staffId,String name, String profile, int salary, int experience) {
+		super();
+		this.staffId=staffId;
+		this.name = name;
+		this.profile = profile;
+		this.salary = salary;
+		this.experience = experience;
+	}
+	
+	
+	
+	public int getStaffId() {
+		return staffId;
+	}
+
+	public void setStaffId(int staffId) {
+		this.staffId = staffId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getProfile() {
+		return profile;
+	}
+
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	@Override
+	public String toString() {
+		return "Staff [staffId=" + staffId + ", name=" + name + ", profile=" + profile + ", salary=" + salary
+				+ ", experience=" + experience + "]";
+	}
+	
+	
+}
