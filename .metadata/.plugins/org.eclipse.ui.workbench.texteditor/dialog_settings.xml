@@ -4,11 +4,13 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
+			<item value="html"/>
 			<item value="save"/>
 			<item value="ss"/>
 			<item value="Product"/>
 		</list>
 		<list key="replacehistory">
+			<item value="jsp"/>
 			<item value="add"/>
 			<item value="lp"/>
 			<item value="Student"/>

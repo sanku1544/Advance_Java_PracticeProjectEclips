@@ -82,6 +82,11 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Java by Kiran\Adv_java421\sp_jsp_practice"/>
+			<item value="D:\Java by Kiran\Adv_java421\spring_mvs"/>
+			<item value="D:\Java by Kiran\Adv_java421\spring_mvs_demo2"/>
+			<item value="D:\Java by Kiran\Adv_java421\spring_mvs_demo"/>
+			<item value="D:\Java by Kiran\Adv_java421\UserAuthentication"/>
 			<item value="D:\Java by Kiran\UserAuthentication\UserAuthentication"/>
 			<item value="D:\Java by Kiran\Adv_java421\sp_emp_management"/>
 			<item value="D:\Java by Kiran\kiranAcademy\kiranAcademy"/>
